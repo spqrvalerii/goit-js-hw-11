@@ -110,7 +110,7 @@ async function onClick() {
   simpleLightbox.refresh();
   currentHits += response.hits.length;
 
-  if (currentHits === response.totalHits) {
+  if (currentHits >= response.totalHits) {
     loadMoreBtn.classList.add('is-hidden');
     collectionEndMessage.classList.remove('is-hidden');
   }
